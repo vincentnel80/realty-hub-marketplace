@@ -1,3 +1,6 @@
+# realty-hub-marketplace
+Home Marketplace built with React + Firebase backend
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
