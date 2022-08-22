@@ -145,5 +145,3 @@ function Listing() {
 }
 
 export default Listing
-
-// https://stackoverflow.com/questions/67552020/how-to-fix-error-failed-to-compile-node-modules-react-leaflet-core-esm-pat
