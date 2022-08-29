@@ -1,3 +1,5 @@
+import './spinner.scss'
+
 function Spinner() {
   return (
     <div className='loadingSpinnerContainer'>

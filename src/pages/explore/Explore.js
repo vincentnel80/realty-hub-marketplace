@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom'
-import Slider from '../components/Slider'
-import rentCategoryImage from '../assets/jpg/rentCategoryImage.jpg'
-import sellCategoryImage from '../assets/jpg/sellCategoryImage.jpg'
+import Slider from '../../components/slider/Slider'
+import './explore.scss'
+import rentCategoryImage from '../../assets/jpg/rentCategoryImage.jpg'
+import sellCategoryImage from '../../assets/jpg/sellCategoryImage.jpg'
 
 function Explore() {
   return (

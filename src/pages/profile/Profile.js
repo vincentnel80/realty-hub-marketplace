@@ -11,12 +11,15 @@ import {
   orderBy,
   deleteDoc,
 } from 'firebase/firestore'
-import { db } from '../firebase.config'
+import { db } from '../../firebase.config'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
-import ListingItem from '../components/ListingItem'
-import arrowRight from '../assets/svg/keyboardArrowRightIcon.svg'
-import homeIcon from '../assets/svg/homeIcon.svg'
+import ListingItem from '../../components/listingitem/ListingItem'
+
+import './profile.scss'
+
+import arrowRight from '../../assets/svg/keyboardArrowRightIcon.svg'
+import homeIcon from '../../assets/svg/homeIcon.svg'
 
 function Profile() {
   const auth = getAuth()

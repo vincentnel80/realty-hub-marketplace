@@ -8,10 +8,12 @@ import {
   limit,
   startAfter,
 } from 'firebase/firestore'
-import { db } from '../firebase.config'
+import { db } from '../../firebase.config'
 import { toast } from 'react-toastify'
-import Spinner from '../components/Spinner'
-import ListingItem from '../components/ListingItem'
+import Spinner from '../../components/spinner/Spinner'
+import ListingItem from '../../components/listingitem/ListingItem'
+
+import './offers.scss'
 
 function Offers() {
   const [listings, setListings] = useState(null)
