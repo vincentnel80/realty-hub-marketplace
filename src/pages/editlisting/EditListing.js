@@ -13,7 +13,7 @@ import { toast } from 'react-toastify'
 import { v4 as uuidv4 } from 'uuid'
 import Spinner from '../../components/spinner/Spinner'
 
-import './editListing.scss'
+import './EditListing.scss'
 
 function EditListing() {
   // eslint-disable-next-line

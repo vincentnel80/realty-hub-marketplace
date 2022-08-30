@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import './listingItem.scss'
+import './ListingItem.scss'
 import { ReactComponent as DeleteIcon } from '../../assets/svg/deleteIcon.svg'
 import { ReactComponent as EditIcon } from '../../assets/svg/editIcon.svg'
 import bedIcon from '../../assets/svg/bedIcon.svg'

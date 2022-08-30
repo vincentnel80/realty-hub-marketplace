@@ -13,7 +13,7 @@ import { toast } from 'react-toastify'
 import { v4 as uuidv4 } from 'uuid'
 import Spinner from '../../components/spinner/Spinner'
 
-import './createListing.scss'
+import './CreateListing.scss'
 
 function CreateListing() {
   // eslint-disable-next-line

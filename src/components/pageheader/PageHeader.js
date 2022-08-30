@@ -20,7 +20,7 @@ import {
 import AddBusinessRoundedIcon from '@mui/icons-material/AddBusinessRounded'
 //import DrawerComp from "./Drawer";
 
-import './pageHeader.scss'
+import './PageHeader.scss'
 
 function PageHeader() {
   /* new menu */
