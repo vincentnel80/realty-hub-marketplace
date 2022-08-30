@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 
 import { Button } from '@mui/material'
 
-import './Listing.scss'
+//import './Listing.scss'
 import 'swiper/swiper-bundle.css'
 import { getDoc, doc } from 'firebase/firestore'
 import { getAuth } from 'firebase/auth'
