@@ -13,7 +13,7 @@ import { toast } from 'react-toastify'
 import Spinner from '../../components/spinner/Spinner'
 import ListingItem from '../../components/listingitem/ListingItem'
 
-import './offers.scss'
+import './Offers.scss'
 
 function Offers() {
   const [listings, setListings] = useState(null)

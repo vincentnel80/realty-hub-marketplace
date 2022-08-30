@@ -14,7 +14,7 @@ import { toast } from 'react-toastify'
 import Spinner from '../../components/spinner/Spinner'
 import ListingItem from '../../components/listingitem/ListingItem'
 
-import './category.scss'
+import './Category.scss'
 
 function Category() {
   const [listings, setListings] = useState(null)

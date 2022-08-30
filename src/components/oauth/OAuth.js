@@ -3,7 +3,7 @@ import { getAuth, signInWithPopup, GoogleAuthProvider } from 'firebase/auth'
 import { doc, setDoc, getDoc, serverTimestamp } from 'firebase/firestore'
 import { db } from '../../firebase.config'
 import { toast } from 'react-toastify'
-import './oAuth.scss'
+import './OAuth.scss'
 import googleIcon from '../../assets/svg/googleIcon.svg'
 
 function OAuth() {

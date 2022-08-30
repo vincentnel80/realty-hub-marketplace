@@ -18,9 +18,7 @@ import Container from '@mui/material/Container'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 // end material ui
 
-//import './signIn.scss'
-import { ReactComponent as ArrowRightIcon } from '../../assets/svg/keyboardArrowRightIcon.svg'
-import visibilityIcon from '../../assets/svg/visibilityIcon.svg'
+import './SignIn.scss'
 
 function SignIn() {
   const [showPassword, setShowPassword] = useState(false)

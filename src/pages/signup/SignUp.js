@@ -22,7 +22,7 @@ import Typography from '@mui/material/Typography'
 import Container from '@mui/material/Container'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 
-import './signUp.scss'
+import './SignUp.scss'
 
 function SignUp() {
   const [showPassword, setShowPassword] = useState(false)

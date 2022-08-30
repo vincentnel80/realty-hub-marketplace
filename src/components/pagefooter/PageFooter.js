@@ -1,4 +1,4 @@
-import './pageFooter.scss'
+import './PageFooter.scss'
 
 function PageFooter() {
   // return current year
