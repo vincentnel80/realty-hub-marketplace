@@ -16,7 +16,7 @@ import Container from '@mui/material/Container'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 // end material ui
 
-import './ForgotPassword.scss'
+//import './ForgotPassword.scss'
 //import { ReactComponent as ArrowRightIcon } from '../../assets/svg/keyboardArrowRightIcon.svg'
 
 function ForgotPassword() {

@@ -4,7 +4,7 @@ import { doc, getDoc } from 'firebase/firestore'
 import { db } from '../../firebase.config'
 import { toast } from 'react-toastify'
 
-import './Contact.scss'
+//import './Contact.scss'
 
 function Contact() {
   const [message, setMessage] = useState('')
