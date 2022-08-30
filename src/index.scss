@@ -57,7 +57,7 @@ button {
   border-radius: 1rem;
 }
 
-.primaryButton {
+/*.primaryButton {
   cursor: pointer;
   background: #00cc66;
   border-radius: 1rem;
@@ -70,7 +70,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 
 .removeIcon {
   cursor: pointer;
@@ -122,7 +122,7 @@ button {
   width: 64px;
   height: 64px;
   border: 8px solid;
-  border-color: #00cc66 transparent #00cc66 transparent;
+  border-color: #0092cc transparent #0092cc transparent;
   border-radius: 50%;
   animation: spin 1.2s linear infinite;
 }
@@ -172,6 +172,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 4rem 0 4rem;
 }
 
 .navbarListItemName,
@@ -374,6 +375,7 @@ button {
 .exploreCategories {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 8rem;
 }
 .exploreCategories a {
   width: 48%;
@@ -618,6 +620,15 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  // new styles below
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: #fff;
+  -webkit-box-shadow: 0 1px 2px 0 rgb(26 26 26 / 15%);
+  box-shadow: 0 1px 2px 0 rgb(26 26 26 / 15%);
 }
 
 .logOut {
@@ -641,11 +652,11 @@ button {
   font-weight: 600;
 }
 
-.changePersonalDetails {
+/*.changePersonalDetails {
   cursor: pointer;
   font-weight: 600;
   color: #00cc66;
-}
+} */
 
 .profileCard {
   background-color: #ffffff;
@@ -687,28 +698,6 @@ button {
 
 .profileAddressActive {
   background-color: rgba(44, 44, 44, 0.1);
-}
-
-.createListing {
-  background-color: #ffffff;
-  border-radius: 1rem;
-  padding: 0.25rem 1rem;
-  box-shadow: rgba(0, 0, 0, 0.2);
-  margin-top: 2rem;
-  font-weight: 600;
-  max-width: 500px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.listingText {
-  margin-top: 3rem;
-  font-weight: 600;
-}
-
-.lisitingsList {
-  padding: 0;
 }
 
 .formLabel {
@@ -803,10 +792,6 @@ button {
   margin-right: 1rem;
 }
 
-.createListingButton {
-  margin-top: 5rem;
-}
-
 .offers {
   margin-bottom: 10rem;
 }
@@ -819,4 +804,11 @@ button {
   margin-left: 1rem;
   font-size: 0.8rem;
   opacity: 0.75;
+}
+
+main {
+  padding-top: 6em;
+  max-width: 960px;
+  margin: 0 auto !important;
+  // add this to correct tag,
 }

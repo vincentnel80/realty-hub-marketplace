@@ -10,9 +10,19 @@ import { setDoc, doc, serverTimestamp } from 'firebase/firestore'
 import { db } from '../../firebase.config'
 import OAuth from '../../components/oauth/OAuth'
 
-import './signup.scss'
-import { ReactComponent as ArrowRightIcon } from '../../assets/svg/keyboardArrowRightIcon.svg'
-import visibilityIcon from '../../assets/svg/visibilityIcon.svg'
+// material UI
+import Avatar from '@mui/material/Avatar'
+import Button from '@mui/material/Button'
+import CssBaseline from '@mui/material/CssBaseline'
+import TextField from '@mui/material/TextField'
+import Grid from '@mui/material/Grid'
+import Box from '@mui/material/Box'
+import LockOutlinedIcon from '@mui/icons-material/LockOutlined'
+import Typography from '@mui/material/Typography'
+import Container from '@mui/material/Container'
+import { createTheme, ThemeProvider } from '@mui/material/styles'
+
+import './signUp.scss'
 
 function SignUp() {
   const [showPassword, setShowPassword] = useState(false)
@@ -22,6 +32,7 @@ function SignUp() {
     password: '',
   })
   const { name, email, password } = formData
+  const theme = createTheme()
 
   const navigate = useNavigate()
 
@@ -64,65 +75,91 @@ function SignUp() {
 
   return (
     <>
-      <div className='pageContainer'>
-        <header>
-          <p className='pageHeader'>Welcome Back!</p>
-        </header>
-
-        <form onSubmit={onSubmit}>
-          <input
-            type='text'
-            className='nameInput'
-            placeholder='Name'
-            id='name'
-            value={name}
-            onChange={onChange}
-          />
-          <input
-            type='email'
-            className='emailInput'
-            placeholder='Email'
-            id='email'
-            value={email}
-            onChange={onChange}
-          />
-
-          <div className='passwordInputDiv'>
-            <input
-              type={showPassword ? 'text' : 'password'}
-              className='passwordInput'
-              placeholder='Password'
-              id='password'
-              value={password}
-              onChange={onChange}
-            />
-
-            <img
-              src={visibilityIcon}
-              alt='show password'
-              className='showPassword'
-              onClick={() => setShowPassword((prevState) => !prevState)}
-            />
-          </div>
-
-          <Link to='/forgot-password' className='forgotPasswordLink'>
-            Forgot Password
-          </Link>
-
-          <div className='signUpBar'>
-            <p className='signUpText'>Sign Up</p>
-            <button className='signUpButton'>
-              <ArrowRightIcon fill='#ffffff' width='34px' height='34px' />
-            </button>
-          </div>
-        </form>
-
-        <OAuth />
-
-        <Link to='/sign-in' className='registerLink'>
-          Sign In Instead
-        </Link>
-      </div>
+      <ThemeProvider theme={theme}>
+        <Container component="main" maxWidth="xs">
+          <p className="pageHeader">Welcome Back!</p>
+          <CssBaseline />
+          <Box
+            sx={{
+              marginTop: 8,
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+            }}
+          >
+            <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+              <LockOutlinedIcon />
+            </Avatar>
+            <Typography component="h1" variant="h5">
+              Sign up
+            </Typography>
+            <Box component="form" noValidate onSubmit={onSubmit} sx={{ mt: 3 }}>
+              <Grid container spacing={2}>
+                <Grid item xs={12}>
+                  <TextField
+                    autoComplete="given-name"
+                    name="firstName"
+                    required
+                    fullWidth
+                    id="name"
+                    value={name}
+                    onChange={onChange}
+                    label="Full Name"
+                    autoFocus
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <TextField
+                    required
+                    fullWidth
+                    type="email"
+                    id="email"
+                    value={email}
+                    onChange={onChange}
+                    label="Email Address"
+                    name="email"
+                    autoComplete="email"
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <TextField
+                    required
+                    fullWidth
+                    name="password"
+                    label="Password"
+                    type={showPassword ? 'text' : 'password'}
+                    id="password"
+                    value={password}
+                    onChange={onChange}
+                    autoComplete="new-password"
+                  />
+                </Grid>
+              </Grid>
+              <Button
+                type="submit"
+                fullWidth
+                variant="contained"
+                sx={{ mt: 3, mb: 2 }}
+              >
+                Sign Up
+              </Button>
+              <Grid container justifyContent="flex-end">
+                <Grid item xs>
+                  <Link to="/forgot-password" variant="body2">
+                    Forgot password?
+                  </Link>
+                </Grid>
+                <Grid item>
+                  <Link to="/sign-in" variant="body2">
+                    Already have an account? Sign in
+                  </Link>
+                </Grid>
+              </Grid>
+            </Box>
+            <OAuth />
+          </Box>
+        </Container>
+      </ThemeProvider>
     </>
   )
 }

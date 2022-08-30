@@ -97,17 +97,14 @@ function Offers() {
   }
 
   return (
-    <div className='category'>
-      <header>
-        <p className='pageHeader'>Offers</p>
-      </header>
-
+    <>
       {loading ? (
         <Spinner />
       ) : listings && listings.length > 0 ? (
         <>
-          <main>
-            <ul className='categoryListings'>
+          <main id="category" className="category">
+            <p className="pageHeader">Offers</p>
+            <ul className="categoryListings">
               {listings.map((listing) => (
                 <ListingItem
                   listing={listing.data}
@@ -121,7 +118,7 @@ function Offers() {
           <br />
           <br />
           {lastFetchedListing && (
-            <p className='loadMore' onClick={onFetchMoreListings}>
+            <p className="loadMore" onClick={onFetchMoreListings}>
               Load More
             </p>
           )}
@@ -129,7 +126,7 @@ function Offers() {
       ) : (
         <p>There are no current offers</p>
       )}
-    </div>
+    </>
   )
 }
 

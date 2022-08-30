@@ -1,6 +1,6 @@
 import { Navigate, Outlet } from 'react-router-dom'
 import { useAuthStatus } from '../../hooks/useAuthStatus'
-import './privateroute.scss'
+import './privateRoute.scss'
 import Spinner from '../spinner/Spinner'
 
 const PrivateRoute = () => {
@@ -10,7 +10,7 @@ const PrivateRoute = () => {
     return <Spinner />
   }
 
-  return loggedIn ? <Outlet /> : <Navigate to='/sign-in' />
+  return loggedIn ? <Outlet /> : <Navigate to="/sign-in" />
 }
 
 export default PrivateRoute

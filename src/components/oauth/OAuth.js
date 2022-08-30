@@ -3,7 +3,7 @@ import { getAuth, signInWithPopup, GoogleAuthProvider } from 'firebase/auth'
 import { doc, setDoc, getDoc, serverTimestamp } from 'firebase/firestore'
 import { db } from '../../firebase.config'
 import { toast } from 'react-toastify'
-import './oauth.scss'
+import './oAuth.scss'
 import googleIcon from '../../assets/svg/googleIcon.svg'
 
 function OAuth() {
@@ -36,10 +36,10 @@ function OAuth() {
   }
 
   return (
-    <div className='socialLogin'>
+    <div className="socialLogin">
       <p>Sign {location.pathname === '/sign-up' ? 'up' : 'in'} with </p>
-      <button className='socialIconDiv' onClick={onGoogleClick}>
-        <img className='socialIconImg' src={googleIcon} alt='google' />
+      <button className="socialIconDiv" onClick={onGoogleClick}>
+        <img className="socialIconImg" src={googleIcon} alt="google" />
       </button>
     </div>
   )

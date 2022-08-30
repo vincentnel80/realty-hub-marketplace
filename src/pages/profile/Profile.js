@@ -14,7 +14,24 @@ import {
 import { db } from '../../firebase.config'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
+//import PageHeader from '../../components/pageheader/PageHeader'
 import ListingItem from '../../components/listingitem/ListingItem'
+
+// material UI grid - might remove
+/*import { makeStyles } from '@material-ui/core/styles';
+import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid'; */
+
+import {
+  AppBar,
+  Button,
+  Tab,
+  Tabs,
+  Toolbar,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from '@mui/material'
 
 import './profile.scss'
 
@@ -63,9 +80,11 @@ function Profile() {
     fetchUserListings()
   }, [auth.currentUser.uid])
 
-  const onLogout = () => {
+  {
+    /* const onLogout = () => {
     auth.signOut()
     navigate('/')
+  }*/
   }
 
   const onSubmit = async () => {
@@ -109,73 +128,83 @@ function Profile() {
   const onEdit = (listingId) => navigate(`/edit-listing/${listingId}`)
 
   return (
-    <div className='profile'>
-      <header className='profileHeader'>
-        <p className='pageHeader'>My Profile</p>
-        <button type='button' className='logOut' onClick={onLogout}>
-          Logout
-        </button>
-      </header>
+    <main id="profile" className="profile">
+      <p className="pageHeader">My Profile</p>
+      <div className="profileDetailsHeader">
+        <p className="profileDetailsText">Personal Details</p>
+        <p
+          className="changePersonalDetails"
+          onClick={() => {
+            changeDetails && onSubmit()
+            setChangeDetails((prevState) => !prevState)
+          }}
+        >
+          {changeDetails ? (
+            <Button
+              sx={{ marginLeft: 'auto' }}
+              type="button"
+              color="secondary"
+              variant="contained"
+            >
+              Done
+            </Button>
+          ) : (
+            <Button
+              sx={{ marginLeft: 'auto' }}
+              type="button"
+              color="primary"
+              variant="contained"
+            >
+              Change
+            </Button>
+          )}
+        </p>
+      </div>
 
-      <main>
-        <div className='profileDetailsHeader'>
-          <p className='profileDetailsText'>Personal Details</p>
-          <p
-            className='changePersonalDetails'
-            onClick={() => {
-              changeDetails && onSubmit()
-              setChangeDetails((prevState) => !prevState)
-            }}
-          >
-            {changeDetails ? 'done' : 'change'}
-          </p>
-        </div>
+      <div className="profileCard">
+        <form>
+          <input
+            type="text"
+            id="name"
+            className={!changeDetails ? 'profileName' : 'profileNameActive'}
+            disabled={!changeDetails}
+            value={name}
+            onChange={onChange}
+          />
+          <input
+            type="text"
+            id="email"
+            className={!changeDetails ? 'profileEmail' : 'profileEmailActive'}
+            disabled={!changeDetails}
+            value={email}
+            onChange={onChange}
+          />
+        </form>
+      </div>
 
-        <div className='profileCard'>
-          <form>
-            <input
-              type='text'
-              id='name'
-              className={!changeDetails ? 'profileName' : 'profileNameActive'}
-              disabled={!changeDetails}
-              value={name}
-              onChange={onChange}
-            />
-            <input
-              type='text'
-              id='email'
-              className={!changeDetails ? 'profileEmail' : 'profileEmailActive'}
-              disabled={!changeDetails}
-              value={email}
-              onChange={onChange}
-            />
-          </form>
-        </div>
+      <Link to="/create-listing" className="createListing">
+        <img src={homeIcon} alt="home" />
+        <p>Sell or rent your home</p>
+        <img src={arrowRight} alt="arrow right" />
+      </Link>
 
-        <Link to='/create-listing' className='createListing'>
-          <img src={homeIcon} alt='home' />
-          <p>Sell or rent your home</p>
-          <img src={arrowRight} alt='arrow right' />
-        </Link>
-
-        {!loading && listings?.length > 0 && (
-          <>
-            <p className='listingText'>Your Listings</p>
-            <ul className='listingsList'>
-              {listings.map((listing) => (
-                <ListingItem
-                  key={listing.id}
-                  listing={listing.data}
-                  id={listing.id}
-                  onDelete={() => onDelete(listing.id)}
-                  onEdit={() => onEdit(listing.id)}
-                />
-              ))}
-            </ul>
-          </>
-        )}
-      </main>
-    </div>
+      {!loading && listings?.length > 0 && (
+        <>
+          <p className="listingText">Your Listings</p>
+          <ul className="listingsList">
+            {listings.map((listing) => (
+              <ListingItem
+                key={listing.id}
+                listing={listing.data}
+                id={listing.id}
+                onDelete={() => onDelete(listing.id)}
+                onEdit={() => onEdit(listing.id)}
+              />
+            ))}
+          </ul>
+        </>
+      )}
+    </main>
   )
 }
 

@@ -4,6 +4,9 @@ import { Helmet } from 'react-helmet'
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
+
+import { Button } from '@mui/material'
+
 import './listing.scss'
 import 'swiper/swiper-bundle.css'
 import { getDoc, doc } from 'firebase/firestore'
@@ -53,14 +56,14 @@ function Listing() {
                 background: `url(${listing.imgUrls[index]}) center no-repeat`,
                 backgroundSize: 'cover',
               }}
-              className='swiperSlideDiv'
+              className="swiperSlideDiv"
             ></div>
           </SwiperSlide>
         ))}
       </Swiper>
 
       <div
-        className='shareIconDiv'
+        className="shareIconDiv"
         onClick={() => {
           navigator.clipboard.writeText(window.location.href)
           setShareLinkCopied(true)
@@ -69,13 +72,13 @@ function Listing() {
           }, 2000)
         }}
       >
-        <img src={shareIcon} alt='' />
+        <img src={shareIcon} alt="" />
       </div>
 
-      {shareLinkCopied && <p className='linkCopied'>Link Copied!</p>}
+      {shareLinkCopied && <p className="linkCopied">Link Copied!</p>}
 
-      <div className='listingDetails'>
-        <p className='listingName'>
+      <div className="listingDetails">
+        <p className="listingName">
           {listing.name} - $
           {listing.offer
             ? listing.discountedPrice
@@ -85,17 +88,17 @@ function Listing() {
                 .toString()
                 .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
         </p>
-        <p className='listingLocation'>{listing.location}</p>
-        <p className='listingType'>
+        <p className="listingLocation">{listing.location}</p>
+        <p className="listingType">
           For {listing.type === 'rent' ? 'Rent' : 'Sale'}
         </p>
         {listing.offer && (
-          <p className='discountPrice'>
+          <p className="discountPrice">
             ${listing.regularPrice - listing.discountedPrice} discount
           </p>
         )}
 
-        <ul className='listingDetailsList'>
+        <ul className="listingDetailsList">
           <li>
             {listing.bedrooms > 1
               ? `${listing.bedrooms} Bedrooms`
@@ -110,9 +113,9 @@ function Listing() {
           <li>{listing.furnished && 'Furnished'}</li>
         </ul>
 
-        <p className='listingLocationTitle'>Location</p>
+        <p className="listingLocationTitle">Location</p>
 
-        <div className='leafletContainer'>
+        <div className="leafletContainer">
           <MapContainer
             style={{ height: '100%', width: '100%' }}
             center={[listing.geolocation.lat, listing.geolocation.lng]}
@@ -121,7 +124,7 @@ function Listing() {
           >
             <TileLayer
               attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-              url='https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png'
+              url="https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png"
             />
 
             <Marker
@@ -135,9 +138,16 @@ function Listing() {
         {auth.currentUser?.uid !== listing.userRef && (
           <Link
             to={`/contact/${listing.userRef}?listingName=${listing.name}`}
-            className='primaryButton'
+            className="primaryButton"
           >
-            Contact Landlord
+            <Button
+              sx={{ marginLeft: 'auto' }}
+              type="button"
+              color="primary"
+              variant="contained"
+            >
+              Contact Landlord
+            </Button>
           </Link>
         )}
       </div>
