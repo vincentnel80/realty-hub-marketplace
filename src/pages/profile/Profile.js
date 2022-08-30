@@ -30,10 +30,9 @@ import {
   Toolbar,
   Typography,
   useMediaQuery,
-  useTheme,
 } from '@mui/material'
 
-import './profile.scss'
+import './Profile.scss'
 
 import arrowRight from '../../assets/svg/keyboardArrowRightIcon.svg'
 import homeIcon from '../../assets/svg/homeIcon.svg'
@@ -79,13 +78,6 @@ function Profile() {
 
     fetchUserListings()
   }, [auth.currentUser.uid])
-
-  {
-    /* const onLogout = () => {
-    auth.signOut()
-    navigate('/')
-  }*/
-  }
 
   const onSubmit = async () => {
     try {

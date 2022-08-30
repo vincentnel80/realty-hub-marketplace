@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import Slider from '../../components/slider/Slider'
-import './explore.scss'
+import './Explore.scss'
 import rentCategoryImage from '../../assets/jpg/rentCategoryImage.jpg'
 import sellCategoryImage from '../../assets/jpg/sellCategoryImage.jpg'
 
