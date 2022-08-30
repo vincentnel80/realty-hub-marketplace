@@ -7,7 +7,9 @@ import {
   ListItemIcon,
   ListItemText,
 } from '@mui/material'
+
 import MenuIcon from '@mui/icons-material/Menu'
+
 const pages = ['Explore', 'Offers', 'Profile']
 const DrawerComp = () => {
   const [openDrawer, setOpenDrawer] = useState(false)
