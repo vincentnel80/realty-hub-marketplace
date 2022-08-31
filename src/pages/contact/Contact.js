@@ -1,8 +1,11 @@
 import { useState, useEffect } from 'react'
-import { useParams, useSearchParams } from 'react-router-dom'
+import { Link, useParams, useSearchParams } from 'react-router-dom'
 import { doc, getDoc } from 'firebase/firestore'
 import { db } from '../../firebase.config'
 import { toast } from 'react-toastify'
+
+import { Button } from '@mui/material'
+import TextareaAutosize from '@mui/base/TextareaAutosize'
 
 //import './Contact.scss'
 
@@ -32,13 +35,9 @@ function Contact() {
   const onChange = (e) => setMessage(e.target.value)
 
   return (
-    <div className="pageContainer">
-      <header>
-        <p className="pageHeader">Contact Landlord</p>
-      </header>
-
+    <>
       {landlord !== null && (
-        <main>
+        <main id="contactLandlord" className="pageContainer">
           <div className="contactLandlord">
             <p className="landlordName">Contact {landlord?.name}</p>
           </div>
@@ -48,13 +47,14 @@ function Contact() {
               <label htmlFor="message" className="messageLabel">
                 Message
               </label>
-              <textarea
+              <TextareaAutosize
                 name="message"
                 id="message"
                 className="textarea"
+                style={{ minHeight: 80 }}
                 value={message}
                 onChange={onChange}
-              ></textarea>
+              ></TextareaAutosize>
             </div>
 
             <a
@@ -62,14 +62,19 @@ function Contact() {
                 'listingName'
               )}&body=${message}`}
             >
-              <button type="button" className="primaryButton">
+              <Button
+                sx={{ marginLeft: 'auto' }}
+                type="button"
+                color="primary"
+                variant="contained"
+              >
                 Send Message
-              </button>
+              </Button>
             </a>
           </form>
         </main>
       )}
-    </div>
+    </>
   )
 }
 

@@ -11,6 +11,7 @@ import { db } from '../../firebase.config'
 import { useNavigate, useParams } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { v4 as uuidv4 } from 'uuid'
+import { Button } from '@mui/material'
 import Spinner from '../../components/spinner/Spinner'
 
 //import './EditListing.scss'
@@ -248,12 +249,9 @@ function EditListing() {
   }
 
   return (
-    <div className="profile">
-      <header>
+    <>
+      <main id="editListing" className="profile">
         <p className="pageHeader">Edit Listing</p>
-      </header>
-
-      <main>
         <form onSubmit={onSubmit}>
           <label className="formLabel">Sell / Rent</label>
           <div className="formButtons">
@@ -461,7 +459,6 @@ function EditListing() {
               />
             </>
           )}
-
           <label className="formLabel">Images</label>
           <p className="imagesInfo">
             The first image will be the cover (max 6).
@@ -476,12 +473,17 @@ function EditListing() {
             multiple
             required
           />
-          <button type="submit" className="primaryButton createListingButton">
+          <Button
+            sx={{ marginLeft: 'auto' }}
+            type="submit"
+            color="primary"
+            variant="contained"
+          >
             Edit Listing
-          </button>
+          </Button>
         </form>
       </main>
-    </div>
+    </>
   )
 }
 
