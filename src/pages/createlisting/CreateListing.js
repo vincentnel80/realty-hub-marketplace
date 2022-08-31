@@ -11,6 +11,7 @@ import { db } from '../../firebase.config'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { v4 as uuidv4 } from 'uuid'
+import { Button } from '@mui/material'
 import Spinner from '../../components/spinner/Spinner'
 
 import './CreateListing.scss'
@@ -442,9 +443,14 @@ function CreateListing() {
             multiple
             required
           />
-          <button type="submit" className="primaryButton createListingButton">
+          <Button
+            sx={{ marginLeft: 'auto' }}
+            type="submit"
+            color="primary"
+            variant="contained"
+          >
             Create Listing
-          </button>
+          </Button>
         </form>
       </main>
     </>

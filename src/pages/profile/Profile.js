@@ -14,13 +14,7 @@ import {
 import { db } from '../../firebase.config'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
-//import PageHeader from '../../components/pageheader/PageHeader'
 import ListingItem from '../../components/listingitem/ListingItem'
-
-// material UI grid - might remove
-/*import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid'; */
 
 import {
   AppBar,
@@ -82,7 +76,7 @@ function Profile() {
   const onSubmit = async () => {
     try {
       if (auth.currentUser.displayName !== name) {
-        // Update display name in fb
+        // Update display name in Firebase
         await updateProfile(auth.currentUser, {
           displayName: name,
         })
