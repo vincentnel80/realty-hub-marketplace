@@ -39,7 +39,6 @@ function ForgotPassword() {
   return (
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
-        <p className="pageHeader">Forgot Password</p>
         <CssBaseline />
         <Box
           sx={{
@@ -52,7 +51,9 @@ function ForgotPassword() {
           <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
             <LockOutlinedIcon />
           </Avatar>
-          <Typography component="h1" variant="h5"></Typography>
+          <Typography component="h1" variant="h5">
+            Forgot Password
+          </Typography>
           <Box component="form" onSubmit={onSubmit} noValidate sx={{ mt: 1 }}>
             <TextField
               margin="normal"
@@ -76,8 +77,8 @@ function ForgotPassword() {
               Send Reset Link
             </Button>
             <p>
-              Enter your email address and request a reset link. This will be
-              forwarded to your mail
+              Enter your email address and click the "Send Reset Link" button to
+              reset your password. A reset link will be sent to your email.
             </p>
             <Grid container>
               <Grid item xs>
