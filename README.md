@@ -51,10 +51,10 @@ Password: password123
 - [![Html5][html5]][html5-url]
 - [![Css3][css3]][css3-url]
 - [![Leaflet][leaflet]][leaflet-url]
-- [![GoogleMaps][googlemaps]][googlemaps-url] // whatever
+- [![GoogleMaps][googlemaps]][googlemaps-url]
 - [![Firebase][firebase]][firebase-url]
 - [![Swiper][swiper]][swiper-url]
-- [![MaterialUI][material-ui-url]][material-ui-url]
+- [![MaterialUI][material-ui]][material-ui-url]
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
