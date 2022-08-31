@@ -62,7 +62,6 @@ function SignIn() {
     <>
       <ThemeProvider theme={theme}>
         <Container component="main" maxWidth="xs">
-          <p className="pageHeader">Welcome Back!</p>
           <CssBaseline />
           <Box
             sx={{
