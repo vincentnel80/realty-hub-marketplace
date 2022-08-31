@@ -37,21 +37,15 @@ function PageHeader() {
   const navigate = useNavigate()
   const onLogout = () => {
     auth.signOut()
-    //navigate('/')
-    window.location.reload('/') // force a reload, is there a better way?
+    window.location.reload('/')
   }
 
   const onLogin = () => {
-    // auth.signIn()
     navigate('/sign-in')
   }
-
-  console.log(auth, 'auth')
-  //console.log(auth.currentUser.displayName,"auth email")
-
   return (
     <>
-      <AppBar sx={{ background: '#e60598' }}>
+      <AppBar sx={{ background: '#541f77' }}>
         <Toolbar>
           <AddBusinessRoundedIcon sx={{ transform: 'scale(2)' }} />
           {isMatch ? (

@@ -9,7 +9,7 @@ html::-webkit-scrollbar {
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: #f2f4f8;
+  background-color: #ffffff;
   margin: 0;
   box-sizing: border-box;
 }
@@ -180,10 +180,10 @@ button {
   margin-top: 0.25rem;
   font-size: 14px;
   font-weight: 600;
-  color: #8f8f8f;
+  color: #fff;
 }
 .navbarListItemNameActive {
-  color: #2c2c2c;
+  color: #9c27b0;
 }
 
 .nameInput {
@@ -807,8 +807,9 @@ button {
 }
 
 main {
-  padding-top: 6em;
-  max-width: 960px;
+  // To Do add to global styles
+  padding: 6rem 2rem;
+  max-width: 1280px;
   margin: 0 auto !important;
-  // add this to correct tag,
+  background-color: white;
 }
