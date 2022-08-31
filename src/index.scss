@@ -136,8 +136,8 @@ button {
 }
 
 .pageHeader {
-  font-size: 2rem;
-  font-weight: 800;
+  font-size: 2.2rem;
+  font-weight: 500;
 }
 
 .navbar {
@@ -185,86 +185,6 @@ button {
 .navbarListItemNameActive {
   color: #9c27b0;
 }
-
-/*.nameInput {
-  margin-bottom: 2rem;
-  background: url('./assets/svg/badgeIcon.svg') #ffffff 2.5% center no-repeat;
-}
-
-.emailInput {
-  margin-bottom: 2rem;
-  background: url('./assets/svg/personIcon.svg') #ffffff 2.5% center no-repeat;
-}
-
-.passwordInputDiv {
-  position: relative;
-}
-
-.passwordInput {
-  margin-bottom: 2rem;
-  background: url('./assets/svg/lockIcon.svg') #ffffff 2.5% center no-repeat;
-}
-
-.showPassword {
-  cursor: pointer;
-  position: absolute;
-  top: -4%;
-  right: 1%;
-  padding: 1rem;
-}
-
-.forgotPasswordLink {
-  cursor: pointer;
-  color: #00cc66;
-  font-weight: 600;
-  text-align: right;
-}
-
-.signInBar,
-.signUpBar {
-  margin-top: 3rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: inherit;
-}
-
-.signInButton,
-.signUpButton,
-.signInText,
-.signUpText {
-  cursor: pointer;
-}
-@media (min-width: 1024px) {
-  .signInBar,
-  .signUpBar {
-    justify-content: start;
-  }
-}
-
-.signInText,
-.signUpText {
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
-.signInButton,
-.signUpButton {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 3rem;
-  height: 3rem;
-  background-color: #00cc66;
-  border-radius: 50%;
-}
-@media (min-width: 1024px) {
-  .signInButton,
-  .signUpButton {
-    margin-left: 3rem;
-  }
-}
-*/
 
 .socialLogin {
   margin-top: 4rem;
@@ -319,32 +239,6 @@ button {
   margin-top: 3rem;
 }
 
-.shareIconDiv {
-  cursor: pointer;
-  position: fixed;
-  top: 3%;
-  right: 5%;
-  z-index: 2;
-  background-color: #ffffff;
-  border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.listingName {
-  font-weight: 600;
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.listingLocation {
-  margin-top: 0;
-  font-weight: 600;
-}
-
 .discountPrice {
   padding: 0.25rem 0.5rem;
   background-color: #000000;
@@ -355,93 +249,6 @@ button {
   display: inline;
 }
 
-.listingType {
-  padding: 0.25rem 0.5rem;
-  background-color: #00cc66;
-  color: #ffffff;
-  border-radius: 2rem;
-  display: inline;
-  font-weight: 600;
-  font-size: 0.8rem;
-  margin-right: 1rem;
-}
-
-.listingDetailsList {
-  padding: 0;
-  list-style-type: none;
-}
-.listingDetailsList li {
-  margin: 0.3rem 0;
-  font-weight: 500;
-  opacity: 0.8;
-}
-
-.listingLocationTitle {
-  margin-top: 2rem;
-  font-weight: 600;
-  font-size: 1.25rem;
-}
-
-.leafletContainer {
-  width: 100%;
-  height: 200px;
-  overflow-x: hidden;
-  margin-bottom: 3rem;
-}
-@media (min-width: 1024px) {
-  .leafletContainer {
-    height: 400px;
-  }
-}
-
-.linkCopied {
-  position: fixed;
-  top: 9%;
-  right: 5%;
-  z-index: 2;
-  background-color: #ffffff;
-  border-radius: 1rem;
-  padding: 0.5rem 1rem;
-  font-weight: 600;
-}
-
-.contactListingName {
-  margin-top: -1rem;
-  margin-bottom: 0;
-  font-weight: 600;
-}
-
-.contactListingLocation {
-  margin-top: 0.25rem;
-  font-weight: 600;
-}
-
-.contactLandlord {
-  margin-top: 2rem;
-  display: flex;
-  align-items: center;
-}
-
-.landlordName {
-  font-weight: 600;
-  font-size: 1.2rem;
-}
-
-.messageForm {
-  margin-top: 0.5rem;
-}
-
-.messageDiv {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 4rem;
-}
-
-.messageLabel {
-  margin-bottom: 0.5rem;
-}
-
 .profile {
   margin-bottom: 10rem;
 }
@@ -450,7 +257,6 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // new styles below
   width: 100%;
   position: fixed;
   top: 0;
@@ -637,7 +443,6 @@ button {
 }
 
 main {
-  // To Do add to global styles
   padding: 6rem 2rem;
   max-width: 1280px;
   margin: 0 auto !important;
