@@ -47,7 +47,8 @@ function PageHeader() {
     <>
       <AppBar sx={{ background: '#541f77' }}>
         <Toolbar>
-          <AddBusinessRoundedIcon sx={{ transform: 'scale(2)' }} />
+          {/* To Do: Add svg logo*/}
+          {/*<AddBusinessRoundedIcon sx={{ transform: 'scale(2)' }} />*/}
           {isMatch ? (
             <>
               <Typography sx={{ fontSize: '2rem', paddingLeft: '10%' }}>
