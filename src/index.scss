@@ -186,7 +186,7 @@ button {
   color: #9c27b0;
 }
 
-.nameInput {
+/*.nameInput {
   margin-bottom: 2rem;
   background: url('./assets/svg/badgeIcon.svg') #ffffff 2.5% center no-repeat;
 }
@@ -264,6 +264,7 @@ button {
     margin-left: 3rem;
   }
 }
+*/
 
 .socialLogin {
   margin-top: 4rem;
@@ -370,105 +371,6 @@ button {
   .swiperSlidePrice {
     font-size: 1.25rem;
   }
-}
-
-.exploreCategories {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 8rem;
-}
-.exploreCategories a {
-  width: 48%;
-}
-
-.exploreCategoryImg {
-  min-height: 115px;
-  height: 15vw;
-  width: 100%;
-  border-radius: 1.5rem;
-  object-fit: cover;
-  margin: 0 auto;
-}
-
-.exploreCategoryName {
-  font-weight: 500;
-  text-align: left;
-}
-
-.category {
-  margin-bottom: 10rem;
-}
-
-.categoryListings {
-  padding: 0;
-}
-
-.categoryListing {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
-  position: relative;
-}
-
-.categoryListingLink {
-  display: contents;
-}
-
-.categoryListingImg {
-  width: 30%;
-  height: 100px;
-  border-radius: 1.5rem;
-  object-fit: cover;
-}
-@media (min-width: 1024px) {
-  .categoryListingImg {
-    width: 19%;
-    height: 217px;
-  }
-}
-
-.categoryListingDetails {
-  width: 65%;
-}
-@media (min-width: 1024px) {
-  .categoryListingDetails {
-    width: 79%;
-  }
-}
-
-.categoryListingLocation {
-  font-weight: 600;
-  font-size: 0.7rem;
-  opacity: 0.8;
-  margin-bottom: 0;
-}
-
-.categoryListingName {
-  font-weight: 600;
-  font-size: 1.25rem;
-  margin: 0;
-}
-
-.categoryListingPrice {
-  margin-top: 0.5rem;
-  font-weight: 600;
-  font-size: 1.1rem;
-  color: #00cc66;
-  margin-bottom: 0;
-  display: flex;
-  align-items: center;
-}
-
-.categoryListingInfoDiv {
-  display: flex;
-  justify-content: space-between;
-  max-width: 275px;
-}
-
-.categoryListingInfoText {
-  font-weight: 500;
-  font-size: 0.7rem;
 }
 
 .loadMore {
